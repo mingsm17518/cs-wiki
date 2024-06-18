@@ -15,19 +15,19 @@ MkDocs是一个快速的、简单的、优美的静态站点生成器，主要�
 
 安装mkdocs非常简单，只需要在控制台运行如下命令即可：
 
-```
+```shell
 pip install mkdocs
 ```
 
 查看mkdocs是否安装成功，只需要运行如下命令：
 
-```
+```Shell
 mkdocs --version
 ```
 
 如果提示不能运行`mkdocs`命令，简单的解决方法只需要在命令前加上`python -m`，即：
 
-```
+```Shell
 python -m mkdocs --version
 ```
 
@@ -37,7 +37,7 @@ python -m mkdocs --version
 
 我们只需要运行如下命令，就可以创建一个站点：
 
-```
+```Shell
 mkdocs new my_wiki(你喜欢的目录名)
 ```
 
@@ -51,19 +51,19 @@ cd my_wiki
 
 运行如下命令，即可在本地访问站点：
 
-```
+```Shell
 mkdocs serve
 ```
 
 在浏览器输入地址`http://127.0.0.1:8000`，页面如下：
 
-![1](..\pic\mkdocs_pic\1.png)
+![1](.\pic\mkdocs_pic\1.png)
 
 在运行站点的同时，我们可以实时修改站点信息，mkdocs会更新并展示在浏览器上，方便我们预览。
 
 我们可以修改`mkdocs.yml`文件中的站点名`site_name`：
 
-```
+```Shell
 site_name: 我的第一个站点
 ```
 
@@ -81,8 +81,10 @@ mkdocs build
 
 然后在目录下打开git，并将当前目录设置为一个仓库，然后与GitHub新创建的仓库连接：
 
-    git init
-    git remote add origin 仓库地址
+```Shell
+git init
+git remote add origin 仓库地址
+```
 
 然后在目录下打开控制台，执行以下命令：
 
@@ -110,12 +112,59 @@ git commit -m"first version"
 
 推送到远程仓库：
 
-```
+```Shell
 git remote add origin 仓库地址
 git push -u origin main(or master)
 ```
 
+新建 `.gitignore` 文件，忽略掉除 `docs` 、 `mkdocs.yml` 以及 `git` 相关文件之外的文件
 
+```yaml
+/*
+!/docs
+!/mkdocs.yml
+!/.gitignore
+!/.github
+```
+
+然后我们在编写完文章后，一般至少都要执行这些命令
+
+```Shell
+git add .
+git commit -m 'new article'
+git push    # 第一次push时执行git push -u origin main
+mkdocs gh-deploy
+```
+
+在仓库根目录下新建 `.github/workflows` 文件夹
+
+```Shell
+mkdir -p .github/workflows
+```
+
+在 `.github/workflows` 文件夹下新建 `gh-deploy.yml` 文件，其他文件名也可以，内容如下
+
+```yaml
+name: Publish docs via GitHub Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXTRA_PACKAGES: build-base
+```
+
+在GitHub仓库页面中，将 `Settings` -> `Actions` -> `General` -> `Workflow Permissions` 设置为 `Read an write permissions`，点击 `Save` 保存设置。这样每次编写完文章，只需成功执行 `git push` ，GitHub就会自动帮助我们部署。
 
 ## 5.mkdocs简单使用
 
@@ -123,7 +172,7 @@ git push -u origin main(or master)
 
 在入门使用中，mkdocs为我们创建了一个页面`index.md`，我们同样可以自己添加页面，比如，在`docs`目录下创建页面`about.md`，然后在配置文件`mkdocs.yml`中添加以下配置项：
 
-```
+```yml
 nav: 
 
   --主页: index.md
@@ -141,7 +190,7 @@ nav:
 
 如果使用mkdocs主题，只需要在`docs`目录下创建目录`img`，然后在目录`img`中放入`favicon.ico`图标即可。
 
-![2](..\pic\mkdocs_pic\2.png)
+![2](.\pic\mkdocs_pic\2.png)
 
 ##### 更改主题
 
@@ -149,7 +198,7 @@ mkdocs默认有两个主题：mkdocs和readthedoc，默认使用mkdocs。
 
 我们在配置文件中修改，使用`readthedocs`主题：
 
-```
+```yml
 theme:
   name: readthedocs
 ```
@@ -164,7 +213,7 @@ https://[github](https://so.csdn.net/so/search?q=github&spm=1001.2101.3001.7020)
 
 首先利用`pip`下载相应的主题：
 
-```
+```Shell
 pip install mkdocs-material
 ```
 
@@ -179,7 +228,7 @@ theme:
 
 如果想进行网页左上角logo修改，颜色修改等可加入如下内容
 
-```
+```yml
 theme:
     name: "material"
     logo:
