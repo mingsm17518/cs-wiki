@@ -1,8 +1,15 @@
 site_name: CS-Wiki
 
 theme:
-  name: material
   custom_dir: custom_dir/
+  name: "material"
+  # logo:
+  #     icon: ""
+  palette:
+      primary: "black"
+      accent: "white"
+  language: "zh"
+
 
 
 nav: 
