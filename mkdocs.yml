@@ -90,6 +90,11 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+plugins:
+  - redirects:
+      redirect_maps:
+        'index.md': 'c-index.md'
+
 extra: 
   social:
     - icon: fontawesome/brands/github
