@@ -16,6 +16,8 @@ nav:
     - C++核心编程: C++核心编程.md
     - 职工管理系统: 职工管理系统.md
     - C++提高编程: C++提高编程.md
+  - c:
+    -C语言入门: 初识C语言.md
 
 theme:
   custom_dir: custom_dir/
