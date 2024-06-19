@@ -1,5 +1,4 @@
 <div align="center">
-    <img width="180px" src="">
     <h1 style="margin-top:0px">『CS-Wiki』</h1>
     <p style="margin-top:0px; margin-bottom:8px; font-size:18px">If you like this page, welcome to star my project.<br>Not only an Interview-Guide, but also a Learning-Direction.</p>
 </div >
