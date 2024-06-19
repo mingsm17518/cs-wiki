@@ -1,4 +1,4 @@
-site_name: CS-Wiki
+site_name: CS Wiki
 
 site_url: https://mingsm17518.github.io/cs-wiki/
 site_author: mingsm17518
@@ -12,6 +12,10 @@ nav:
   - test: test.md
   - c++: 
     - C++基础入门: C++基础入门.md
+    - 通讯录管理系统: 通讯录管理系统.md
+    - C++核心编程: C++核心编程.md
+    - 职工管理系统: 职工管理系统.md
+    - C++提高编程: C++提高编程.md
 
 theme:
   custom_dir: custom_dir/
