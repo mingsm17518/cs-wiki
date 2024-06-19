@@ -4,7 +4,9 @@ site_url: https://mingsm17518.github.io/cs-wiki/
 site_author: mingsm17518
 
 nav: 
-  - 主页: index.md
+  - 主页: 
+    - 中文: c-index.md
+    - English: e-index.md
   - 关于: about.md
   - mkdocs: mkdocs.md
   - test: test.md
