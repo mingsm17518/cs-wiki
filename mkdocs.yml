@@ -8,16 +8,22 @@ nav:
     - 主页: index.md
     - Home: Home.md
   - 关于: about.md
-  - mkdocs: mkdocs.md
+  - 静态网页的搭建: mkdocs.md
+  - 书摘: 书摘.md
   - test: test.md
   - c++: 
-    - C++基础入门: C++基础入门.md
-    - 通讯录管理系统: 通讯录管理系统.md
-    - C++核心编程: C++核心编程.md
-    - 职工管理系统: 职工管理系统.md
-    - C++提高编程: C++提高编程.md
+    - C++基础入门: c++/C++基础入门.md
+    - 通讯录管理系统: c++/通讯录管理系统.md
+    - C++核心编程: c++/C++核心编程.md
+    - 职工管理系统: c++/职工管理系统.md
+    - C++提高编程: c++/C++提高编程.md
   - c:
-    - C语言入门: 初识C语言.md
+    - C语言入门: c/初识C语言.md
+
+# mkdocs.yaml
+extra_javascript:
+    - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+
 
 theme:
   custom_dir: custom_dir/
