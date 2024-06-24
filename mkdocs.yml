@@ -11,6 +11,7 @@ nav:
   - 静态网页的搭建: mkdocs.md
   - 书摘: 书摘.md
   - test: test.md
+  - trick: 激活Typora.md
   - c++: 
     - C++基础入门: c++/C++基础入门.md
     - 通讯录管理系统: c++/通讯录管理系统.md
@@ -19,6 +20,7 @@ nav:
     - C++提高编程: c++/C++提高编程.md
   - c:
     - C语言入门: c/初识C语言.md
+  - 随笔: 随笔/消极自由.md
 
 # mkdocs.yaml
 extra_javascript:
