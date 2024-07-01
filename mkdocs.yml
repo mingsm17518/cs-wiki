@@ -7,7 +7,10 @@ nav:
   - 主页: 
     - 主页: index.md
     - Home: Home.md
-  - 关于: about.md
+  - 关于: 
+    - about: 关于/about.md
+    - 随笔: 关于/消极自由.md
+    - 书摘: 关于/《我的外婆从不内耗》.md
   - 静态网页的搭建: mkdocs.md
   - 书摘: 书摘.md
   - test: test.md
@@ -20,7 +23,6 @@ nav:
     - C++提高编程: c++/C++提高编程.md
   - c:
     - C语言入门: c/初识C语言.md
-  - 随笔: 随笔/消极自由.md
 
 # mkdocs.yaml
 extra_javascript:
