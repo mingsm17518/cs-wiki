@@ -12,7 +12,6 @@ nav:
     - 随笔: 关于/消极自由.md
     - 书摘: 关于/《我的外婆从不内耗》.md
   - 静态网页的搭建: mkdocs.md
-  - 书摘: 书摘.md
   - test: test.md
   - trick: 激活Typora.md
   - c++: 
