@@ -13,7 +13,9 @@ nav:
     - 书摘: 关于/《我的外婆从不内耗》.md
   - 静态网页的搭建: mkdocs.md
   - test: test.md
-  - trick: 激活Typora.md
+  - others: 
+    - Ubuntu扩展内存: Ubuntu扩展内存.md
+    - 激活Typora: 激活Typora.md
   - c++: 
     - C++基础入门: c++/C++基础入门.md
     - 通讯录管理系统: c++/通讯录管理系统.md
