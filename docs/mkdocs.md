@@ -57,7 +57,7 @@ mkdocs serve
 
 在浏览器输入地址`http://127.0.0.1:8000`，页面如下：
 
-![1](.\pic\mkdocs_pic\1.png)
+![1](./pic/mkdocs_pic/1.png)
 
 在运行站点的同时，我们可以实时修改站点信息，mkdocs会更新并展示在浏览器上，方便我们预览。
 
