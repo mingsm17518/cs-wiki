@@ -29,6 +29,9 @@ nav:
 extra_javascript:
     - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
 
+# plugins:
+#   - search
+#   - pdf-export
 
 theme:
   custom_dir: custom_dir/
